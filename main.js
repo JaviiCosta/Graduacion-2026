@@ -16,7 +16,47 @@ document.addEventListener('DOMContentLoaded', () => {
     initLetterTyping();
     initGiftCelebration();
     initFloralDecor();
+    initHamburgerMenu();
 });
+
+/* ══════════════════════════════════════════
+   HAMBURGER MENU — Mobile nav toggle
+   ══════════════════════════════════════════ */
+function initHamburgerMenu() {
+    const hamburger = document.getElementById('nav-hamburger');
+    const navLinks = document.getElementById('nav-links');
+    if (!hamburger || !navLinks) return;
+
+    function closeMenu() {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('open');
+    }
+
+    hamburger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('open');
+    });
+
+    // Close menu when a link is clicked
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    // Close menu when tapping outside
+    document.addEventListener('click', (e) => {
+        if (navLinks.classList.contains('open') && !navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+            closeMenu();
+        }
+    });
+
+    // Close menu on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+            closeMenu();
+        }
+    });
+}
 
 /* ══════════════════════════════════════════
    PARTICLE BACKGROUND — Elegant dust motes
@@ -34,7 +74,8 @@ function initParticles() {
     resize();
     window.addEventListener('resize', resize);
 
-    const count = Math.min(35, Math.floor(window.innerWidth / 40));
+    const isMobile = window.innerWidth < 768;
+    const count = isMobile ? Math.min(12, Math.floor(window.innerWidth / 50)) : Math.min(35, Math.floor(window.innerWidth / 40));
     for (let i = 0; i < count; i++) {
         particles.push({
             x: Math.random() * w,
@@ -431,12 +472,13 @@ function initGiftCelebration() {
    ══════════════════════════════════════════ */
 function initFloralDecor() {
     const emojis = ['🌹', '❤️', '🌹', '❤️', '🌹', '❤️', '🥀', '🌹', '❤️', '💕'];
-    const MAX_ACTIVE = 25;        // Max emojis visible at once
-    const LIFETIME = 3000;        // How long each emoji lives (ms)
+    const isMobile = window.innerWidth < 768;
+    const MAX_ACTIVE = isMobile ? 10 : 25;
+    const LIFETIME = isMobile ? 2500 : 3000;
     const FADE_DURATION = 800;    // Fade-out transition time (ms)
-    const SCROLL_COOLDOWN = 300;  // Min ms between scroll spawns
-    const IDLE_INTERVAL = 1200;   // Spawn interval when not scrolling (ms)
-    const BATCH_SCROLL = 3;       // Emojis per scroll event
+    const SCROLL_COOLDOWN = isMobile ? 500 : 300;
+    const IDLE_INTERVAL = isMobile ? 2000 : 1200;
+    const BATCH_SCROLL = isMobile ? 1 : 3;
     const BATCH_IDLE = 1;         // Emojis per idle tick
 
     let activeCount = 0;
@@ -511,5 +553,5 @@ function initFloralDecor() {
     }, IDLE_INTERVAL);
 
     // Spawn an initial batch so the page isn't empty
-    setTimeout(() => spawnBatch(5), 800);
+    setTimeout(() => spawnBatch(isMobile ? 2 : 5), 800);
 }
