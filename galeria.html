@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería — Momentos Especiales</title>
+    <meta name="description" content="Galería de fotos de los mejores momentos durante la etapa universitaria.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=11">
+    <link rel="stylesheet" href="galeria.css?v=1">
+</head>
+
+<body>
+
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- NAV -->
+    <nav id="main-nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">Graduación <span class="nav-year">2026</span></a>
+            <button class="nav-hamburger" id="nav-hamburger" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html#hero">Inicio</a>
+                <a href="index.html#journey">Trayectoria</a>
+                <a href="index.html#gallery-cta">Fotos</a>
+                <a href="index.html#letter">Para Ño</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- GALLERY HERO -->
+    <section id="galeria-hero">
+        <div class="galeria-hero-content" data-aos="fade-up" data-aos-duration="1000">
+            <span class="section-tag">Recuerdos</span>
+            <h1 class="section-title galeria-title">Nuestros Momentos</h1>
+            <p class="section-desc">Cada foto guarda una historia que merece ser recordada.</p>
+        </div>
+    </section>
+
+    <!-- FILTER TABS -->
+    <section id="galeria-filters">
+        <div class="filter-bar" data-aos="fade-up" data-aos-delay="200">
+            <button class="filter-btn active" data-filter="all">Todas</button>
+            <button class="filter-btn" data-filter="amigos">Amigos</button>
+            <button class="filter-btn" data-filter="viajes">Viajes</button>
+            <button class="filter-btn" data-filter="anios">Estos Años</button>
+        </div>
+    </section>
+
+    <!-- GALLERY GRID -->
+    <section id="galeria-grid">
+        <div class="gallery-container">
+
+            <!-- AMIGOS -->
+            <div class="gallery-item" data-category="amigos" data-aos="fade-up" data-aos-delay="50">
+                <img src="Fotos/Amigos/image00002.jpeg" alt="Momento con amigos" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="amigos" data-aos="fade-up" data-aos-delay="80">
+                <img src="Fotos/Amigos/image00003.jpeg" alt="Momento con amigos" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="amigos" data-aos="fade-up" data-aos-delay="110">
+                <img src="Fotos/Amigos/image00004.jpeg" alt="Momento con amigos" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="amigos" data-aos="fade-up" data-aos-delay="140">
+                <img src="Fotos/Amigos/image00005.jpeg" alt="Momento con amigos" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="amigos" data-aos="fade-up" data-aos-delay="170">
+                <img src="Fotos/Amigos/image00006.jpeg" alt="Momento con amigos" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="amigos" data-aos="fade-up" data-aos-delay="200">
+                <img src="Fotos/Amigos/image00007.jpeg" alt="Momento con amigos" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="amigos" data-aos="fade-up" data-aos-delay="230">
+                <img src="Fotos/Amigos/image00008.jpeg" alt="Momento con amigos" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="amigos" data-aos="fade-up" data-aos-delay="260">
+                <img src="Fotos/Amigos/image00015.jpeg" alt="Momento con amigos" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="amigos" data-aos="fade-up" data-aos-delay="290">
+                <img src="Fotos/Amigos/image00016.jpeg" alt="Momento con amigos" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="amigos" data-aos="fade-up" data-aos-delay="320">
+                <img src="Fotos/Amigos/image00018.jpeg" alt="Momento con amigos" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="amigos" data-aos="fade-up" data-aos-delay="350">
+                <img src="Fotos/Amigos/image00021.jpeg" alt="Momento con amigos" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="amigos" data-aos="fade-up" data-aos-delay="380">
+                <img src="Fotos/Amigos/image00025.jpeg" alt="Momento con amigos" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="amigos" data-aos="fade-up" data-aos-delay="410">
+                <img src="Fotos/Amigos/image00031.jpeg" alt="Momento con amigos" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="amigos" data-aos="fade-up" data-aos-delay="440">
+                <img src="Fotos/Amigos/image00032.jpeg" alt="Momento con amigos" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="amigos" data-aos="fade-up" data-aos-delay="470">
+                <img src="Fotos/Amigos/image00033.jpeg" alt="Momento con amigos" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="amigos" data-aos="fade-up" data-aos-delay="500">
+                <img src="Fotos/Amigos/image00034.jpeg" alt="Momento con amigos" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+
+            <!-- VIAJES -->
+            <div class="gallery-item" data-category="viajes" data-aos="fade-up" data-aos-delay="50">
+                <img src="Fotos/viajes/image00001.png" alt="Recuerdo de viaje" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="viajes" data-aos="fade-up" data-aos-delay="80">
+                <img src="Fotos/viajes/image00009.jpeg" alt="Recuerdo de viaje" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="viajes" data-aos="fade-up" data-aos-delay="110">
+                <img src="Fotos/viajes/image00010.jpeg" alt="Recuerdo de viaje" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="viajes" data-aos="fade-up" data-aos-delay="140">
+                <img src="Fotos/viajes/image00011.jpeg" alt="Recuerdo de viaje" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="viajes" data-aos="fade-up" data-aos-delay="170">
+                <img src="Fotos/viajes/image00012.jpeg" alt="Recuerdo de viaje" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="viajes" data-aos="fade-up" data-aos-delay="200">
+                <img src="Fotos/viajes/image00019.jpeg" alt="Recuerdo de viaje" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="viajes" data-aos="fade-up" data-aos-delay="230">
+                <img src="Fotos/viajes/image00040.jpeg" alt="Recuerdo de viaje" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="viajes" data-aos="fade-up" data-aos-delay="260">
+                <img src="Fotos/viajes/image00041.jpeg" alt="Recuerdo de viaje" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+
+            <!-- ESTOS AÑOS (fotos sueltas en la raíz de Fotos/) -->
+            <div class="gallery-item" data-category="anios" data-aos="fade-up" data-aos-delay="50">
+                <img src="Fotos/image00013.jpeg" alt="Recuerdo de estos años" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="anios" data-aos="fade-up" data-aos-delay="80">
+                <img src="Fotos/image00014.jpeg" alt="Recuerdo de estos años" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="anios" data-aos="fade-up" data-aos-delay="110">
+                <img src="Fotos/image00017.jpeg" alt="Recuerdo de estos años" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="anios" data-aos="fade-up" data-aos-delay="140">
+                <img src="Fotos/image00020.jpeg" alt="Recuerdo de estos años" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="anios" data-aos="fade-up" data-aos-delay="170">
+                <img src="Fotos/image00022.jpeg" alt="Recuerdo de estos años" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="anios" data-aos="fade-up" data-aos-delay="200">
+                <img src="Fotos/image00023.jpeg" alt="Recuerdo de estos años" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="anios" data-aos="fade-up" data-aos-delay="230">
+                <img src="Fotos/image00024.jpeg" alt="Recuerdo de estos años" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="anios" data-aos="fade-up" data-aos-delay="260">
+                <img src="Fotos/image00029.jpeg" alt="Recuerdo de estos años" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="anios" data-aos="fade-up" data-aos-delay="290">
+                <img src="Fotos/image00035.jpeg" alt="Recuerdo de estos años" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="anios" data-aos="fade-up" data-aos-delay="320">
+                <img src="Fotos/image00036.jpeg" alt="Recuerdo de estos años" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="anios" data-aos="fade-up" data-aos-delay="350">
+                <img src="Fotos/image00037.jpeg" alt="Recuerdo de estos años" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="anios" data-aos="fade-up" data-aos-delay="380">
+                <img src="Fotos/image00038.jpeg" alt="Recuerdo de estos años" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="anios" data-aos="fade-up" data-aos-delay="410">
+                <img src="Fotos/image00039.jpeg" alt="Recuerdo de estos años" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="anios" data-aos="fade-up" data-aos-delay="440">
+                <img src="Fotos/image00042.jpeg" alt="Recuerdo de estos años" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+            <div class="gallery-item" data-category="anios" data-aos="fade-up" data-aos-delay="470">
+                <img src="Fotos/image00043.jpeg" alt="Recuerdo de estos años" loading="lazy">
+                <div class="gallery-overlay"><span class="gallery-zoom-icon">⤢</span></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Cerrar">&times;</button>
+        <button class="lightbox-prev" id="lightbox-prev" aria-label="Anterior">&#8249;</button>
+        <button class="lightbox-next" id="lightbox-next" aria-label="Siguiente">&#8250;</button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Foto ampliada">
+        </div>
+        <div class="lightbox-counter" id="lightbox-counter"></div>
+    </div>
+
+    <!-- BACK BUTTON -->
+    <div class="galeria-back" data-aos="fade-up">
+        <a href="index.html" class="gallery-cta-btn back-btn">
+            <span class="cta-icon">←</span>
+            Volver
+        </a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <p class="footer-text">Hecho con amor y cariño por <span class="footer-name">Ño ❤️ </span>
+        </p>
+        <p class="footer-sub">&copy; 2026</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="galeria.js?v=1"></script>
+</body>
+
+</html>
